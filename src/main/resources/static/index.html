@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebSocket Chat</title>
+    <link rel="stylesheet" href="./styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sockjs-client/1.6.1/sockjs.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.min.js"></script>
+</head>
+<body>
+<div class="chat-container">
+    <div class="chat-header">
+        <h1>WebSocket Chat</h1>
+        <div class="connection-status">
+            <span id="status-indicator" class="status-disconnected"></span>
+            <span id="status-text">Disconnected</span>
+        </div>
+    </div>
+
+    <div class="chat-content">
+        <div class="user-panel">
+            <div class="user-info">
+                <input type="text" id="username" placeholder="Your name" maxlength="20">
+            </div>
+            <div class="connection-controls">
+                <button id="connect-button" class="primary-button">Connect</button>
+                <button id="disconnect-button" class="secondary-button" disabled>Disconnect</button>
+            </div>
+        </div>
+
+        <div class="messages-panel">
+            <div id="message-list" class="message-list"></div>
+        </div>
+
+        <div class="input-panel">
+            <textarea id="message-input" placeholder="Type your message here..." disabled></textarea>
+            <button id="send-button" class="primary-button" disabled>Send</button>
+        </div>
+    </div>
+</div>
+
+<script src="./chat.js"></script>
+</body>
+</html>
