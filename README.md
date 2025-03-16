@@ -1,1 +1,1 @@
-# rt-notification-system
+# rt-chat-system
